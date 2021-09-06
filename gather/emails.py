@@ -145,7 +145,7 @@ def create_route(route_name, route_pattern, path):
     logger.debug(expression)
     forward_url = "forward('%s')" % forward_url
     logger.debug(forward_url)
-    return requests.post( "https://api.mailgun.net/v2/routes",
+    return requests.post( "https://api.eu.mailgun.net/v2/routes",
             auth=("api", mailgun_api_key),
             data={"priority": 1,
                 "description": route_name,

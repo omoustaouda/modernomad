@@ -21,7 +21,7 @@ def mailgun_send(mailgun_data, files_dict=None):
         logger.debug("mailgun_send: o:testmode=%s" % mailgun_data["o:testmode"])
 
     try:
-        resp = requests.post("https://api.mailgun.net/v2/%s/messages" % settings.LIST_DOMAIN,
+        resp = requests.post("https://api.eu.mailgun.net/v2/%s/messages" % settings.LIST_DOMAIN,
             auth=("api", settings.MAILGUN_API_KEY),
             data=mailgun_data,
             files=files_dict
