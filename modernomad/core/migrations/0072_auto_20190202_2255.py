@@ -153,7 +153,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='location',
             name='slug',
-            field=models.CharField(help_text='Try to make this short and sweet. It will also be used to form several location-specific email addresses in the form of xxx@<your_slug>.mail.embassynetwork.com', max_length=60, unique=True),
+            field=models.CharField(help_text='Try to make this short and sweet. It will also be used to form several location-specific email addresses in the form of xxx@<your_slug>.mg.booking.moos.garden', max_length=60, unique=True),
         ),
         migrations.AlterField(
             model_name='location',

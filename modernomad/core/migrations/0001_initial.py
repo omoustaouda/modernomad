@@ -58,7 +58,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
-                ('slug', models.CharField(help_text=b'Try to make this short and sweet. It will also be used to form several location-specific email addresses in the form of xxx@<your_slug>.mail.embassynetwork.com', unique=True, max_length=60)),
+                ('slug', models.CharField(help_text=b'Try to make this short and sweet. It will also be used to form several location-specific email addresses in the form of xxx@<your_slug>.mg.booking.moos.garden', unique=True, max_length=60)),
                 ('short_description', models.TextField()),
                 ('address', models.CharField(max_length=300)),
                 ('latitude', models.FloatField()),

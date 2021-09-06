@@ -266,7 +266,7 @@ def guest_welcome(use):
         'day_of_week' : day_of_week,
         'location': use.location,
         'use': use,
-        'current_email' : 'current@%s.mail.embassynetwork.com' % location.slug,
+        'current_email' : 'current@%s.mg.booking.moos.garden' % location.slug,
         'site_url': "https://" + domain + urlresolvers.reverse('location_detail', args=(location.slug,)),
         'events_url' : "https://" + domain + urlresolvers.reverse('gather_upcoming_events', args=(location.slug,)),
         'profile_url' : "https://" + domain + urlresolvers.reverse('user_detail', args=(use.user.username,)),
@@ -623,7 +623,7 @@ def test80085(request, location_slug):
         body_html = body_html + html_footer
 
     # send the message
-    list_address = "test80085@"+location.slug+".mail.embassynetwork.com"
+    list_address = "test80085@"+location.slug+".mg.booking.moos.garden"
     mailgun_data = {"from": from_address,
             "to": [recipient, ],
             "bcc": bcc_list,

@@ -63,7 +63,7 @@ class Location(models.Model):
     slug = models.CharField(
             max_length=60, unique=True,
             help_text="Try to make this short and sweet. It will also be used to form several location-specific " +
-            "email addresses in the form of xxx@<your_slug>.mail.embassynetwork.com"
+            "email addresses in the form of xxx@<your_slug>.mg.booking.moos.garden"
             )
     short_description = models.TextField()
     address = models.CharField(max_length=300)
@@ -128,7 +128,7 @@ class Location(models.Model):
 
     def from_email(self):
         ''' return a location-specific email in the standard format we use.'''
-        return "stay@%s.mail.embassynetwork.com" % self.slug
+        return "stay@%s.booking.moos.garden" % self.slug
 
     def get_rooms(self):
         return list(Resource.objects.filter(location=self))
