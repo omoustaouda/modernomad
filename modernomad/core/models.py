@@ -128,7 +128,8 @@ class Location(models.Model):
 
     def from_email(self):
         ''' return a location-specific email in the standard format we use.'''
-        return "stay@%s.booking.moos.garden" % self.slug
+        return "stay@booking.moos.garden" # workaround - until subdomains are defined / created for locations
+        # return "stay@%s.booking.moos.garden" % self.slug
 
     def get_rooms(self):
         return list(Resource.objects.filter(location=self))
